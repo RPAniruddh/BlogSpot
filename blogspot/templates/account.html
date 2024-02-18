@@ -8,12 +8,12 @@
             <p class="text-secondary">{{ current_user.email }}</p>
         </div>
       </div>
-    <form method="POST" action="">
+    <form method="POST" action="" enctype="multipart/form-data">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Account Info</legend>
             <div class="form-group">
-                {{ form.username.label(class="form-control-label") }}
+                {{ form.username.label(class="form-control-label mb-2") }}
                 {% if form.username.errors %}
                 {{ form.username(class="form-control form-control-lg is-invalid") }}
                 <div class="invalid-feedback">
@@ -22,11 +22,11 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.username(class="form-control form-control-lg") }}
+                {{ form.username(class="form-control form-control-lg mb-2") }}
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.email.label(class="form-control-label") }}
+                {{ form.email.label(class="form-control-label mb-2") }}
                 {% if form.email.errors %}
                 {{ form.email(class="form-control form-control-lg is-invalid") }}
                 <div class="invalid-feedback">
@@ -37,8 +37,17 @@
                 {% else %}
                 {{ form.email(class="form-control form-control-lg") }}
                 {% endif %}
+            </div><br>
+            <div class="form-group">
+                {{ form.picture.label(class ='mb-3') }} <br>
+                {{ form.picture(class ="form-control-file") }}
+                {% if form.picture.errors %}
+                    {% for error in form.picture.errors %}
+                    <span class="text-danger"><br>{{ error }}</span><br>
+                    {% endfor %}
+                {% endif %}
             </div>
-        </fieldset>
+        </fieldset><br>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
