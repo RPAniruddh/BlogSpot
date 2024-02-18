@@ -1,9 +1,6 @@
-a {
-  text-decoration: none;
-}
 body {
-  background: #000000;
-  color: #ffffff;
+  background: #fafafa;
+  color: #333333;
   margin-top: 5rem;
 }
 
@@ -12,11 +9,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-steel {
-  background-color: #0095ff;
+  background-color: #5f788a;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #ffffff;
+  color: #cbd5db;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -46,7 +43,6 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
-  color: #000000;
 }
 
 .article-img {
