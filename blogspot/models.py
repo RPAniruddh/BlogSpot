@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(20), unique =True, nullable =False)
     email = db.Column(db.String(100), unique =True, nullable =False)
     password = db.Column(db.String(50), nullable =False)
-    image_file = db.Column(db.String(100), default='default.png', nullable =False)
+    image_file = db.Column(db.String(100), default='default.jpg', nullable =False)
     post = db.relationship('Post', backref ='author', lazy =True)
     
     def __repr__(self):
