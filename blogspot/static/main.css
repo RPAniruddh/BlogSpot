@@ -91,3 +91,42 @@ a.article-title:hover {
 .media-body {
   flex: 1; /* Take remaining space */
 }
+/* Updated CSS */
+.article-metadata {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 10px; /* Increased margin bottom for spacing */
+}
+
+.article-metadata img {
+  height: 40px; /* Adjust image height */
+  width: 40px; /* Adjust image width */
+  margin-right: 10px; /* Adjust margin between image and username */
+  border-radius: 50%; /* Make the image circular */
+}
+
+.article-metadata a {
+  color: #428bca; /* Adjust username color */
+  font-weight: bold; /* Make username bold */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.article-metadata a:hover {
+  color: #2a6496; /* Adjust username color on hover */
+  text-decoration: underline; /* Underline username on hover */
+}
+
+.article-metadata small {
+  color: #888888; /* Adjust date color */
+  font-size: 0.9em; /* Decrease date font size */
+  margin-left: 5px; /* Add spacing between username and date */
+}
+
+.article-title {
+  margin-top: 10px; /* Add margin between metadata and title */
+}
+
+.article-content {
+  line-height: 1.6; /* Increase line height for better readability */
+}

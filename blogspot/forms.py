@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileAllowed, FileField
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from blogspot.models import User, Post
 from flask_login import current_user
@@ -57,3 +57,9 @@ class UpdateAccountForm(FlaskForm):
             user =User.query.filter_by(email =email.data).first()
             if user:
                 raise ValidationError('This email is being used, please try another one')
+            
+
+class PostForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    content = TextAreaField('Content', validators=[DataRequired()])
+    submit =SubmitField('Post')
