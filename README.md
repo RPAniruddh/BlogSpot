@@ -1,4 +1,4 @@
-# The-BlogSpot (Under Development)
+# The-BlogSpot 
 
 This is a simple blog application built with Flask. It is currently under development.
 
