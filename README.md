@@ -1,6 +1,6 @@
 # The-BlogSpot 
 
-This is a simple blog application built with Flask. It is currently under development.
+This is a simple blog application built with Flask.
 
 ## Introduction
 
